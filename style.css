@@ -50,6 +50,25 @@ html{
 .title-small--dark{
     color: var(--color-principal-100);
 }
+.btn-primary{
+    display: flex;
+    padding: 12px 48px;
+    border: 2px solid color var(--color-principal-500);
+    background-color: var(--color-principal-500);
+    border-radius: 8px;  
+    color: var(--color-principal-100); 
+    font-weight: 700;
+}
+
+
+.btn-secundary{
+    display: flex;
+    align-items: center;
+    background-color: var(--color-principal-300);
+    padding: 12px 48px;
+    border: 2px none color var(--color-principal-300);
+    border-radius: 8px;
+}
 
 
 header{
@@ -59,7 +78,7 @@ header{
     height: 100px;
     position: sticky;
     top: 0;
-    z-index: 2;
+    z-index: 1;
     box-shadow: 1px 6px 8px -5px rgba(153, 135, 135, 0.401);
     background-color: var(--color-principal-100);
     align-items: center;
@@ -69,7 +88,7 @@ header{
 .header-left-content{
     display: flex;
     flex-direction: row;
-    gap: 40px;
+    gap: 24px;
     padding: 29px 0px 29px 40px;
 }
 .logo-content{
@@ -78,13 +97,13 @@ header{
 }
 
 .Hostinger-logo-black{
-    max-width: 200px;
+    max-width: 180px;
     height: auto;
 }
 .nav-content{
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: 24px;
     flex: 1;
 }
 
@@ -96,7 +115,7 @@ header{
 .header-right-content{
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: 24px;
     padding: 29px 29px 40px;
 
 }
@@ -119,6 +138,12 @@ header{
     text-decoration: none;
     padding: 12px 16px;
     border-radius: 16px;
+}
+.btn-menu{
+        display: none;
+}
+.section-container{
+    background-color: var(--color-principal-100); 
 }
 
 .section-container--light{
@@ -193,40 +218,23 @@ header{
 
 }
 
-.btn-primary{
-    display: flex;
-    padding: 12px 48px;
-    border: 2px solid color var(--color-principal-500);
-    background-color: var(--color-principal-500);
-    border-radius: 8px;  
-    color: var(--color-principal-100); 
-    font-weight: 700;
-}
 
-
-.btn-secundary{
-    display: flex;
-    align-items: center;
-    background-color: var(--color-principal-300);
-    padding: 12px 48px;
-    border: 2px none color var(--color-principal-300);
-    border-radius: 8px;
-    
-
-
-}
 .hero-promo{
     display: flex;
     flex-direction: row;
     padding: 12px;
     gap: 5px;
 }
+
 .section-container--dark{
+    display: flex;
+    flex-direction: column;
     background-color: var(--color-principal-800);
     padding: 80px;
     margin-top: 40px;
-   
-
+    width: 100%;
+    
+     
 }
 
 .info-content{
@@ -241,35 +249,27 @@ header{
     margin-top: 20px;
     margin: 0 0 48px;
     padding: 0 40px;
-    width: 1027px;
-    height: 88px;
-
-
-}
-.content-title__title{
-    width: 1047px;
-    height: 40px;
-    font-size: 36px;
+    width: 80%;
+    height: auto;
+    font-size: 32px;
     font-weight: 700px;
-
 }
 
 .content-title__info{
     font-size: 16px;
-    width: 1047px;
-    height: 24px;
-    margin: 24px 0 0;
-    font-weight: 700px
-    ;
+    width: 100%;
+    font-weight: 700px;
+    margin-bottom: 10px;
    
 }
 
 .content-cards-info{
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 30px;
     justify-content: space-between;
     margin-bottom: 20px;
+    
     
 
 }
@@ -314,25 +314,21 @@ header{
     height: 96px;
 }
 footer{
+    display: flex;
+    flex-direction: column;
     padding: 0 50px 0 50px;
     margin: 0 0 24px;
     margin-top: 16px;
+    width: 100vw;
     background-color: var(--color-principal-300);
 }
 
-.footer-top{
+.footer-logo-icon{
     display: flex;
-    justify-content: space-between; 
-    border: 2px none color var(--color-principal-500);
-    border-bottom: #673de5;
-
+    flex-direction: row;
+    justify-content: space-between;
 }
-.footer-left-content{
-    display: flex;
-    flex-direction: column;
-    flex: 1;
 
-}
 .logo-icon{
     display: flex;
     align-items: center;  
@@ -342,12 +338,31 @@ footer{
     max-width: 150px;
     height: auto;
 }
-
-.paymenth-methods{
+.social-icon-content{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.social-icon__logo{
+    width: 100px;
+    height: auto; 
+}
+.legal-footer{
     display: flex;
     flex-direction: row;
+    justify-content: flex-end;
+    align-items:center;
+    text-align: right;
     gap: 10px;
-    margin-bottom: 20px;
+
+}
+
+.paymenth-methods{
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   flex: 1;
+   width: 200px;
     
 }
 .credit-cards{
@@ -363,24 +378,131 @@ footer{
     font-weight: 500;  
     text-decoration: none;
 }
-.footer-right-content{
-    display: flex;
-    flex-direction: column;
-}
-.social-icon{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: right;
-    gap: 20px;   
-    padding: 20px;
-}
-.legal-footer{
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px;
-}
-
 .text-small--legal{
     text-decoration: none;
 }
+.footer-copyright{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+.footer-copyright__left{
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+.footer-copyright__rigth{
+    align-items: center;
+
+}
+
+    
+    @media screen and (max-width: 1028px) {
+    html {
+        font-size: 14px; 
+    }
+    .btn-menu{
+        display: none;
+    }
+    header {
+        display: flex;
+        align-items: center;
+        max-width: 100vw; 
+    }
+
+    .section-container--light{
+        display: flex;
+        flex-direction: column;
+    }
+    .hero-info {
+        text-align: center; 
+    }
+
+    .hero-price {
+        align-items: center;
+    }
+
+    .info-content {
+        padding: 20px; 
+    }
+
+    .content-cards {
+        display: flex;
+        flex-direction: column;
+        margin: 10px 0; 
+    }
+
+    footer {
+        text-align: center; 
+    }
+
+    .paymenth-methods {
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: center; 
+    }
+}
+@media screen and (max-width: 768px) {
+    html{
+        font-size: 14px;
+    }
+    header{
+        display: flex;
+    
+    }
+    .Hostinger-logo-black{
+        max-width: 100px;
+    }
+    header .nav-content{
+        display: none;
+    }
+    header .header-right-content{
+        display: none;
+    }
+    .btn-menu{
+        display: flex;
+    }
+    .section-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .hero-img{
+        max-width: 400px;
+    }
+    .section-container--dark{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 110vw;
+
+    }
+    .content-cards-info{
+        display: flex;
+        flex-direction: column;
+    }
+    footer{
+        width: 110vw;;
+    }
+    .footer-logo-icon{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-top: 10px;  
+    }
+   
+    .social-icon__logo {
+        margin: 0 5px; 
+    }
+    
+    }
+    .legal-footer{
+        display:flex;
+        text-align:center;
+    }
+    .footer-copyright{
+        display: flex;
+        flex-direction: column;
+    }
+   
+
+  
